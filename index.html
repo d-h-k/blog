@@ -1,1 +1,1351 @@
+<html>
 
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>점진적 발전을 주도하는 김동훈 입니다</title>
+	<style>
+		/* cspell:disable-file */
+		/* webkit printing magic: print all background colors */
+		html {
+			-webkit-print-color-adjust: exact;
+		}
+
+		* {
+			box-sizing: border-box;
+			-webkit-print-color-adjust: exact;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		@media only screen {
+			body {
+				margin: 2em auto;
+				max-width: 900px;
+				color: rgb(55, 53, 47);
+			}
+		}
+
+		body {
+			line-height: 1.5;
+			white-space: pre-wrap;
+		}
+
+		a,
+		a.visited {
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		.pdf-relative-link-path {
+			font-size: 80%;
+			color: #444;
+		}
+
+		h1,
+		h2,
+		h3 {
+			letter-spacing: -0.01em;
+			line-height: 1.2;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+
+		.page-title {
+			font-size: 2.5rem;
+			font-weight: 700;
+			margin-top: 0;
+			margin-bottom: 0.75em;
+		}
+
+		h1 {
+			font-size: 1.875rem;
+			margin-top: 1.875rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin-top: 1.25rem;
+		}
+
+		.source {
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			padding: 1.5em;
+			word-break: break-all;
+		}
+
+		.callout {
+			border-radius: 3px;
+			padding: 1rem;
+		}
+
+		figure {
+			margin: 1.25em 0;
+			page-break-inside: avoid;
+		}
+
+		figcaption {
+			opacity: 0.5;
+			font-size: 85%;
+			margin-top: 0.5em;
+		}
+
+		mark {
+			background-color: transparent;
+		}
+
+		.indented {
+			padding-left: 1.5em;
+		}
+
+		hr {
+			background: transparent;
+			display: block;
+			width: 100%;
+			height: 1px;
+			visibility: visible;
+			border: none;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		@media only print {
+			img {
+				max-height: 100vh;
+				object-fit: contain;
+			}
+		}
+
+		@page {
+			margin: 1in;
+		}
+
+		.collection-content {
+			font-size: 0.875rem;
+		}
+
+		.column-list {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.column {
+			padding: 0 1em;
+		}
+
+		.column:first-child {
+			padding-left: 0;
+		}
+
+		.column:last-child {
+			padding-right: 0;
+		}
+
+		.table_of_contents-item {
+			display: block;
+			font-size: 0.875rem;
+			line-height: 1.3;
+			padding: 0.125rem;
+		}
+
+		.table_of_contents-indent-1 {
+			margin-left: 1.5rem;
+		}
+
+		.table_of_contents-indent-2 {
+			margin-left: 3rem;
+		}
+
+		.table_of_contents-indent-3 {
+			margin-left: 4.5rem;
+		}
+
+		.table_of_contents-link {
+			text-decoration: none;
+			opacity: 0.7;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid rgba(55, 53, 47, 0.09);
+			border-collapse: collapse;
+		}
+
+		table {
+			border-left: none;
+			border-right: none;
+		}
+
+		th,
+		td {
+			font-weight: normal;
+			padding: 0.25em 0.5em;
+			line-height: 1.5;
+			min-height: 1.5em;
+			text-align: left;
+		}
+
+		th {
+			color: rgba(55, 53, 47, 0.6);
+		}
+
+		ol,
+		ul {
+			margin: 0;
+			margin-block-start: 0.6em;
+			margin-block-end: 0.6em;
+		}
+
+		li>ol:first-child,
+		li>ul:first-child {
+			margin-block-start: 0.6em;
+		}
+
+		ul>li {
+			list-style: disc;
+		}
+
+		ul.to-do-list {
+			padding-inline-start: 0;
+		}
+
+		ul.to-do-list>li {
+			list-style: none;
+		}
+
+		.to-do-children-checked {
+			text-decoration: line-through;
+			opacity: 0.375;
+		}
+
+		ul.toggle>li {
+			list-style: none;
+		}
+
+		ul {
+			padding-inline-start: 1.7em;
+		}
+
+		ul>li {
+			padding-left: 0.1em;
+		}
+
+		ol {
+			padding-inline-start: 1.6em;
+		}
+
+		ol>li {
+			padding-left: 0.2em;
+		}
+
+		.mono ol {
+			padding-inline-start: 2em;
+		}
+
+		.mono ol>li {
+			text-indent: -0.4em;
+		}
+
+		.toggle {
+			padding-inline-start: 0em;
+			list-style-type: none;
+		}
+
+		/* Indent toggle children */
+		.toggle>li>details {
+			padding-left: 1.7em;
+		}
+
+		.toggle>li>details>summary {
+			margin-left: -1.1em;
+		}
+
+		.selected-value {
+			display: inline-block;
+			padding: 0 0.5em;
+			background: rgba(206, 205, 202, 0.5);
+			border-radius: 3px;
+			margin-right: 0.5em;
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+			white-space: nowrap;
+		}
+
+		.collection-title {
+			display: inline-block;
+			margin-right: 1em;
+		}
+
+		.page-description {
+			margin-bottom: 2em;
+		}
+
+		.simple-table {
+			margin-top: 1em;
+			font-size: 0.875rem;
+			empty-cells: show;
+		}
+
+		.simple-table td {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table th {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table-header-color {
+			background: rgb(247, 246, 243);
+			color: black;
+		}
+
+		.simple-table-header {
+			font-weight: 500;
+		}
+
+		time {
+			opacity: 0.5;
+		}
+
+		.icon {
+			display: inline-block;
+			max-width: 1.2em;
+			max-height: 1.2em;
+			text-decoration: none;
+			vertical-align: text-bottom;
+			margin-right: 0.5em;
+		}
+
+		img.icon {
+			border-radius: 3px;
+		}
+
+		.user-icon {
+			width: 1.5em;
+			height: 1.5em;
+			border-radius: 100%;
+			margin-right: 0.5rem;
+		}
+
+		.user-icon-inner {
+			font-size: 0.8em;
+		}
+
+		.text-icon {
+			border: 1px solid #000;
+			text-align: center;
+		}
+
+		.page-cover-image {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			max-height: 30vh;
+		}
+
+		.page-header-icon {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		.page-header-icon-with-cover {
+			margin-top: -0.72em;
+			margin-left: 0.07em;
+		}
+
+		.page-header-icon img {
+			border-radius: 3px;
+		}
+
+		.link-to-page {
+			margin: 1em 0;
+			padding: 0;
+			border: none;
+			font-weight: 500;
+		}
+
+		p>.user {
+			opacity: 0.5;
+		}
+
+		td>.user,
+		td>time {
+			white-space: nowrap;
+		}
+
+		input[type="checkbox"] {
+			transform: scale(1.5);
+			margin-right: 0.6em;
+			vertical-align: middle;
+		}
+
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.image {
+			border: none;
+			margin: 1.5em 0;
+			padding: 0;
+			border-radius: 0;
+			text-align: center;
+		}
+
+		.code,
+		code {
+			background: rgba(135, 131, 120, 0.15);
+			border-radius: 3px;
+			padding: 0.2em 0.4em;
+			border-radius: 3px;
+			font-size: 85%;
+			tab-size: 2;
+		}
+
+		code {
+			color: #eb5757;
+		}
+
+		.code {
+			padding: 1.5em 1em;
+		}
+
+		.code-wrap {
+			white-space: pre-wrap;
+			word-break: break-all;
+		}
+
+		.code>code {
+			background: none;
+			padding: 0;
+			font-size: 100%;
+			color: inherit;
+		}
+
+		blockquote {
+			font-size: 1.25em;
+			margin: 1em 0;
+			padding-left: 1em;
+			border-left: 3px solid rgb(55, 53, 47);
+		}
+
+		.bookmark {
+			text-decoration: none;
+			max-height: 8em;
+			padding: 0;
+			display: flex;
+			width: 100%;
+			align-items: stretch;
+		}
+
+		.bookmark-title {
+			font-size: 0.85em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 1.75em;
+			white-space: nowrap;
+		}
+
+		.bookmark-text {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.bookmark-info {
+			flex: 4 1 180px;
+			padding: 12px 14px 14px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.bookmark-image {
+			width: 33%;
+			flex: 1 1 180px;
+			display: block;
+			position: relative;
+			object-fit: cover;
+			border-radius: 1px;
+		}
+
+		.bookmark-description {
+			color: rgba(55, 53, 47, 0.6);
+			font-size: 0.75em;
+			overflow: hidden;
+			max-height: 4.5em;
+			word-break: break-word;
+		}
+
+		.bookmark-href {
+			font-size: 0.75em;
+			margin-top: 0.25em;
+		}
+
+		.sans {
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+		}
+
+		.code {
+			font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+		}
+
+		.serif {
+			font-family: Lyon-Text, Georgia, ui-serif, serif;
+		}
+
+		.mono {
+			font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+		}
+
+		.pdf .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
+		}
+
+		.pdf .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.pdf .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
+		}
+
+		.pdf .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.highlight-default {
+			color: rgba(55, 53, 47, 1);
+		}
+
+		.highlight-gray {
+			color: rgba(120, 119, 116, 1);
+			fill: rgba(120, 119, 116, 1);
+		}
+
+		.highlight-brown {
+			color: rgba(159, 107, 83, 1);
+			fill: rgba(159, 107, 83, 1);
+		}
+
+		.highlight-orange {
+			color: rgba(217, 115, 13, 1);
+			fill: rgba(217, 115, 13, 1);
+		}
+
+		.highlight-yellow {
+			color: rgba(203, 145, 47, 1);
+			fill: rgba(203, 145, 47, 1);
+		}
+
+		.highlight-teal {
+			color: rgba(68, 131, 97, 1);
+			fill: rgba(68, 131, 97, 1);
+		}
+
+		.highlight-blue {
+			color: rgba(51, 126, 169, 1);
+			fill: rgba(51, 126, 169, 1);
+		}
+
+		.highlight-purple {
+			color: rgba(144, 101, 176, 1);
+			fill: rgba(144, 101, 176, 1);
+		}
+
+		.highlight-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.highlight-red {
+			color: rgba(212, 76, 71, 1);
+			fill: rgba(212, 76, 71, 1);
+		}
+
+		.highlight-gray_background {
+			background: rgba(241, 241, 239, 1);
+		}
+
+		.highlight-brown_background {
+			background: rgba(244, 238, 238, 1);
+		}
+
+		.highlight-orange_background {
+			background: rgba(251, 236, 221, 1);
+		}
+
+		.highlight-yellow_background {
+			background: rgba(251, 243, 219, 1);
+		}
+
+		.highlight-teal_background {
+			background: rgba(237, 243, 236, 1);
+		}
+
+		.highlight-blue_background {
+			background: rgba(231, 243, 248, 1);
+		}
+
+		.highlight-purple_background {
+			background: rgba(244, 240, 247, 0.8);
+		}
+
+		.highlight-pink_background {
+			background: rgba(249, 238, 243, 0.8);
+		}
+
+		.highlight-red_background {
+			background: rgba(253, 235, 236, 1);
+		}
+
+		.block-color-default {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray {
+			color: rgba(120, 119, 116, 1);
+			fill: rgba(120, 119, 116, 1);
+		}
+
+		.block-color-brown {
+			color: rgba(159, 107, 83, 1);
+			fill: rgba(159, 107, 83, 1);
+		}
+
+		.block-color-orange {
+			color: rgba(217, 115, 13, 1);
+			fill: rgba(217, 115, 13, 1);
+		}
+
+		.block-color-yellow {
+			color: rgba(203, 145, 47, 1);
+			fill: rgba(203, 145, 47, 1);
+		}
+
+		.block-color-teal {
+			color: rgba(68, 131, 97, 1);
+			fill: rgba(68, 131, 97, 1);
+		}
+
+		.block-color-blue {
+			color: rgba(51, 126, 169, 1);
+			fill: rgba(51, 126, 169, 1);
+		}
+
+		.block-color-purple {
+			color: rgba(144, 101, 176, 1);
+			fill: rgba(144, 101, 176, 1);
+		}
+
+		.block-color-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.block-color-red {
+			color: rgba(212, 76, 71, 1);
+			fill: rgba(212, 76, 71, 1);
+		}
+
+		.block-color-gray_background {
+			background: rgba(241, 241, 239, 1);
+		}
+
+		.block-color-brown_background {
+			background: rgba(244, 238, 238, 1);
+		}
+
+		.block-color-orange_background {
+			background: rgba(251, 236, 221, 1);
+		}
+
+		.block-color-yellow_background {
+			background: rgba(251, 243, 219, 1);
+		}
+
+		.block-color-teal_background {
+			background: rgba(237, 243, 236, 1);
+		}
+
+		.block-color-blue_background {
+			background: rgba(231, 243, 248, 1);
+		}
+
+		.block-color-purple_background {
+			background: rgba(244, 240, 247, 0.8);
+		}
+
+		.block-color-pink_background {
+			background: rgba(249, 238, 243, 0.8);
+		}
+
+		.block-color-red_background {
+			background: rgba(253, 235, 236, 1);
+		}
+
+		.select-value-color-interactiveBlue {
+			background-color: rgba(35, 131, 226, .07);
+		}
+
+		.select-value-color-pink {
+			background-color: rgba(245, 224, 233, 1);
+		}
+
+		.select-value-color-purple {
+			background-color: rgba(232, 222, 238, 1);
+		}
+
+		.select-value-color-green {
+			background-color: rgba(219, 237, 219, 1);
+		}
+
+		.select-value-color-gray {
+			background-color: rgba(227, 226, 224, 1);
+		}
+
+		.select-value-color-translucentGray {
+			background-color: rgba(255, 255, 255, 0.0375);
+		}
+
+		.select-value-color-orange {
+			background-color: rgba(250, 222, 201, 1);
+		}
+
+		.select-value-color-brown {
+			background-color: rgba(238, 224, 218, 1);
+		}
+
+		.select-value-color-red {
+			background-color: rgba(255, 226, 221, 1);
+		}
+
+		.select-value-color-yellow {
+			background-color: rgba(253, 236, 200, 1);
+		}
+
+		.select-value-color-blue {
+			background-color: rgba(211, 229, 239, 1);
+		}
+
+		.checkbox {
+			display: inline-flex;
+			vertical-align: text-bottom;
+			width: 16;
+			height: 16;
+			background-size: 16px;
+			margin-left: 2px;
+			margin-right: 5px;
+		}
+
+		.checkbox-on {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+
+		.checkbox-off {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+	</style>
+</head>
+
+<body>
+	<article id="54a69701-610a-464b-b993-f5b85538c00d" class="page sans">
+		<header>
+			<h1 class="page-title">점진적 발전을 주도하는 김동훈 입니다</h1>
+			<p class="page-description"></p>
+		</header>
+		<div class="page-body">
+			<div id="90d88804-435b-475d-8ab7-21f9385d767d" class="column-list">
+				<div id="0280cf39-5db1-453f-84ae-41852bddcb30" style="width:62.5%" class="column">
+					<figure id="ad3489e6-1360-4473-911c-08a0a72413db" class="image"><a
+							href="%E1%84%8C%E1%85%A5%E1%86%B7%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%8C%E1%85%A5%E1%86%A8%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%83%E1%85%A9%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%80%E1%85%B5%E1%86%B7%E1%84%83%E1%85%A9%E1%86%BC%E1%84%92%E1%85%AE%E1%86%AB%20%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%2054a69701610a464bb993f5b85538c00d/Untitled.png"><img
+								style="width:624px"
+								src="%E1%84%8C%E1%85%A5%E1%86%B7%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%8C%E1%85%A5%E1%86%A8%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%83%E1%85%A9%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%80%E1%85%B5%E1%86%B7%E1%84%83%E1%85%A9%E1%86%BC%E1%84%92%E1%85%AE%E1%86%AB%20%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%82%E1%85%B5%E1%84%83%E1%85%A1%2054a69701610a464bb993f5b85538c00d/Untitled.png" /></a>
+					</figure>
+				</div>
+				<div id="2c27cbc0-e32b-4303-99b0-531121e0ecda" style="width:37.5%" class="column">
+					<h3 id="7fa3289f-3ec4-4447-8439-ebf23cae55c5" class="">저는 이런 사람입니다</h3>
+					<hr id="7d88cb6e-21c7-47ef-a7ce-a0f68df2cb43" />
+					<ul id="98efb8cb-7c14-40f7-bc53-3771876c5493" class="bulleted-list">
+						<li style="list-style-type:disc">5년차 Web Backend 엔지니어로 일하고 있습니다.</li>
+					</ul>
+					<ul id="83382219-6e15-4307-b20e-f3b92fdb77b8" class="bulleted-list">
+						<li style="list-style-type:disc">삶에 도움이 되고 누군가의 고민을 해결해줄수 있는 프로덕트 만들어가고 싶습니다.</li>
+					</ul>
+					<ul id="8617d3d1-0018-431c-a2b6-48eedc6f10a7" class="bulleted-list">
+						<li style="list-style-type:disc">비지니스 가치를 만들어내는 엔지니어가 되기 위해 노력합니다.</li>
+					</ul>
+				</div>
+			</div>
+			<p id="ca2bfc1e-783b-4126-8dcb-0554920e4a8c" class="">
+			</p>
+			<p id="4e94139a-af75-4ff9-ac00-eef4f7d9e21c" class="">
+			</p>
+			<h2 id="078672be-f5a9-4ba3-9657-0ec8969df194" class=""><strong>Work :</strong> <strong>Experience &amp;
+					Projects</strong></h2>
+			<hr id="52e2d781-cd91-42f7-98de-e14c14270443" />
+			<div id="4e2cf71a-1db5-4dce-a6df-74b575c79fe5" class="column-list">
+				<div id="c5b078a1-e572-4715-a7b4-10659fea4054" style="width:25%" class="column">
+					<h2 id="6982d0bb-bf56-4016-98ce-ea3e79bb2576" class=""><strong>Kakao Enterprise
+							Laas부문 </strong></h2>
+					<p id="7be1ca61-8b15-46f9-ab9a-3700505be6b5" class="">2022.02 - 현재</p>
+					<p id="76ae8831-11cc-426c-90ef-fdb431120afa" class="">
+					</p>
+				</div>
+				<div id="39791bc4-6a48-4878-8ad4-e4cb50d6b1e7" style="width:75%" class="column">
+					<h2 id="f232e105-c16d-48fa-8baf-53093af9e054" class="">Common Backend 개발</h2>
+					<p id="17c77711-59ff-4ac5-b6bc-f673310f04f9" class="">2023.03 - 현재</p>
+					<p id="2b9f7ecc-ef6e-4c85-9d91-7e03fc82b4c7" class=""><strong>Description</strong></p>
+					<ul id="366e3695-9e9f-4adc-868c-66ba05bccd49" class="bulleted-list">
+						<li style="list-style-type:disc">laas 부문의 물류 서비스를 제공하기 위해 SpringBoot로 이루어진 공통 백엔드를 개발하고 유지보수
+							합니다.</li>
+					</ul>
+					<p id="77570c2e-fc61-4e79-954b-1d46cdfd334f" class=""><strong>What did I do</strong></p>
+					<ul id="d287afbb-391d-492e-b83e-f901f653d3a3" class="bulleted-list">
+						<li style="list-style-type:disc"><strong>개인정보 보호 정책</strong>
+							<p id="daa500df-e3ee-4f60-878b-f36dddfd080b" class="">데이터를 저장하고, 위험이 있는 로직을 찾아 수정하면서 개인정보
+								보호에 관한 요구사항들을 구현합니다.</p>
+							<p id="929c6aa1-4fef-4c68-88ae-2fa23988745e" class=""><span
+									style="border-bottom:0.05em solid"><strong>핵심 기능이, 부가 기능으로 인한 영향을 받지
+										않도록</strong></span> 노력합니다. 로그 쌓는 부분을 Async 방식으로 개발하여 로깅에서 에러가 나도 핵심 기능에 영향을 미치지
+								못하도록 작성하였습니다. 더해서 로깅때문에 핵심기능의 응답속도가 느려지지 않도록 개발합니다.</p>
+						</li>
+					</ul>
+					<ul id="e6abbb4b-232f-4065-9ec3-fd92b430989d" class="bulleted-list">
+						<li style="list-style-type:disc"><strong>IAM 서비스
+							</strong>플랫폼에서 필요로하는 IAM 서비스 추가 기능을 구현합니다.
+							영향도가 큰 프로젝트는 <span style="border-bottom:0.05em solid"><strong>코드리뷰 단계를
+									추가</strong></span>하였습니다.
+							Brach Protection 정책을 추가하고, 동료들도 코드리뷰에 동참할수 있도록 전파합니다.</li>
+					</ul>
+					<ul id="a84669cf-1232-4ebb-bb08-15b0a292488e" class="bulleted-list">
+						<li style="list-style-type:disc"><strong>계약&amp;정산 모듈
+							</strong>정산모듈에서의 기능추가를 위해서 <span
+								style="border-bottom:0.05em solid"><strong>테스트코드</strong></span>를 작성하고, 도메인 로직을 구현한다음,
+							Batch 혹은 REST API 를 통해서 딜리버리 합니다.
+							정산모듈에서의 이슈를 <span style="border-bottom:0.05em solid"><strong>집요하게 원인을 파고들어</strong></span>
+							비지니스 로직이 설계와 기획 의도대로 잘 동작하고 구현하는지 검증합니다. 증상을 해결하고 에러를 막는데 만족하지 않습니다. </li>
+					</ul>
+					<h2 id="bb4e8d4f-d25f-4d95-8bdd-039b7ab60f2a" class="">IAM Backend 개발</h2>
+					<p id="4525f290-6130-4c9e-b44b-d25dd9178e8d" class="">2022.09 - 2023.03</p>
+					<p id="aac66a8f-a197-4b2c-9602-ccbf70d98d5d" class=""><strong>Description</strong></p>
+					<ul id="6fd06637-f1a3-45d9-b0cb-c2c1c47346cb" class="bulleted-list">
+						<li style="list-style-type:disc">서비스 종료 IAM 을 대체하기 위해 신규 IAM 인 Okta를 플랫폼에 도입하는 프로젝트를 진행했습니다.
+						</li>
+					</ul>
+					<p id="3678041d-4d06-4bb9-8779-558fafc3d3b2" class=""><strong>What did I do</strong></p>
+					<ul id="290d2778-b848-4f67-b3ac-2ab2434064df" class="bulleted-list">
+						<li style="list-style-type:disc">User 정보를 이관하기 위한 Migration Batch 개발하였습니다.</li>
+					</ul>
+					<ul id="da50a6d1-97c2-46e1-83dd-74b846d18260" class="bulleted-list">
+						<li style="list-style-type:disc">플랫폼 내의 다른 모듈들이 데이터 변경을 반영 할 수 있도록 Sync Batch 를 개발하였습니다.</li>
+					</ul>
+					<ul id="86ef4f72-9ab2-423e-978e-6873bace11cf" class="bulleted-list">
+						<li style="list-style-type:disc">요구사항이 추가될수록 부가기능에 의한 이슈가 많아졌습니다. IAM 서비스의 <span
+								style="border-bottom:0.05em solid"><strong>주요기능 실행이 로깅 등의 부가로직의 실행에 영향을 받지
+									않도록</strong></span> 부가기능들을 여러 기법 ( AOP, Async ) 을 통해 분리했습니다.</li>
+					</ul>
+					<h2 id="223e0b34-c32a-4d94-b213-f7fe677f13cb" class="">Image Backend 개발</h2>
+					<p id="7f5cff7a-4036-4e3f-a3ae-a8202511f019" class="">2022.02 - 2022.08 </p>
+					<p id="83ba7056-a329-40f8-97ea-5433b4f49424" class=""><strong>Description</strong></p>
+					<ul id="84cc3454-4014-44b7-9059-76deba3da54c" class="bulleted-list">
+						<li style="list-style-type:disc">플랫폼에서 필요로 하는 이미지에 대한 보안 및 대용량 데이터 처리를 위해서 이미지 리소스를 제공하기 위한
+							Backend 를 신규 개발하였습니다.</li>
+					</ul>
+					<p id="09f7e602-1bb4-415b-b796-28b50b9101a9" class=""><strong>What did I do</strong></p>
+					<ul id="4c461d29-a103-4bc1-bdad-ab8e5146a887" class="bulleted-list">
+						<li style="list-style-type:disc">Console 에서 1회 최대 15 개씩 업로드가 가능한데, VR 컨텐츠 제공 기능이 추가되며 1회에 50,000
+							개씩 이미지파일을 Cloud에 업로드해야하는 상황이였습니다. Springboot Backend App을 새로 만들고 압축파일을 전달받아 자동으로 압축을 풀고 세부
+							경로를 맞춰 Object Storage 에 추가하는 기능을 구현하였습니다.</li>
+					</ul>
+					<ul id="412adc25-1476-4ff1-84b0-88c56ff63af7" class="bulleted-list">
+						<li style="list-style-type:disc">이미지 및 첨부파일에 대한 User별 접근을 제어하기 위해 기능 추가 예정입니다.</li>
+					</ul>
+					<h2 id="ff36b8e0-0293-47ad-9ca6-45d61675811b" class="">DevOps</h2>
+					<p id="433d0693-918e-4af0-892a-d4bbd81be720" class="">전체 기간</p>
+					<p id="7b1f0b2a-aaf2-41f2-acaf-6b9da4273731" class=""><strong>Description</strong></p>
+					<ul id="1117ed76-65d4-4967-b400-e0cac491522f" class="bulleted-list">
+						<li style="list-style-type:disc">플랫폼 개선과 프로덕트 고도화를 위하여 SRE 팀과 함께 협업을 통해 DevOps 역할을 수행하고 있습니다
+						</li>
+					</ul>
+					<p id="49d3b049-cbae-4a14-a83d-0f98b07321b1" class=""><strong>What did I do</strong></p>
+					<ul id="8f3f7ea0-1a1b-4e0a-b979-2790453e3f82" class="bulleted-list">
+						<li style="list-style-type:disc">장애가 발생했을때<span style="border-bottom:0.05em solid"><strong>
+									적극적으로 참여하고 함께 이슈를 해결</strong></span>해나갑니다.</li>
+					</ul>
+					<ul id="f0b0c4f9-0033-46bd-944c-ea10d2e7799a" class="bulleted-list">
+						<li style="list-style-type:disc">신규 CI/CD 플랫폼 도입에 참여하며 SRE 분들과도 <span
+								style="border-bottom:0.05em solid"><strong>페어 프로그래밍</strong></span>을 진행하여 빠른 업무 진행을
+							Support 합니다</li>
+					</ul>
+					<ul id="4fc3679d-be05-4a31-aed4-746bc30612b7" class="bulleted-list">
+						<li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><strong>infra 와 소프트웨어에
+									vertical issue를 개선해 나갑니다</strong></span>. infra 에서 처리할수 있는것들을 Springboot 로직에서 제거하고
+							istio 혹은 k8s 의 기능으로 하나씩 대체해나갑니다. CORS Filtering 기능 이관을 진행했고, 최대파일크기 제한 기능을 이관중입니다.</li>
+					</ul>
+					<ul id="60526b07-5cb7-440e-9f2d-2eb5be328bc4" class="bulleted-list">
+						<li style="list-style-type:disc">비용절감을 위해서 유료화된 Lens 를 대체할수 있는 OpenLens 를 찾고 POC 과정을 통해 검증하고 확산을
+							위해 사용법을 공유했습니다. 이로 인해 부서에서 <span style="border-bottom:0.05em solid"><strong>매년 약 6100$ (약
+									800만원) 을 절감하고</strong></span> 있습니다.</li>
+					</ul>
+				</div>
+			</div>
+			<p id="0dce2d35-d769-44e7-9ae8-cc489ffb32b3" class="">
+			</p>
+			<div id="7de25922-6d91-4bdb-8b60-c82a2997b803" class="column-list">
+				<div id="5a34c0c2-1528-451e-abf3-374aabb5ac65" style="width:25%" class="column">
+					<h3 id="106056a7-c3f7-4c1f-a41e-008b250e7aa6" class="">비팩토리
+						개발팀</h3>
+					<p id="e999de44-097b-48a4-a03a-260b050fa45d" class="">2021.06 - 2021.10</p>
+					<p id="bcd64978-a9ba-45ce-b68f-8c2d0babee55" class="">
+					</p>
+				</div>
+				<div id="f16fce5e-cd51-405e-b745-c317b3c0bcde" style="width:75%" class="column">
+					<h2 id="67a5c934-8e8f-46da-aaf2-27e4b14f1cec" class="">Custom Goods 사업 CRM 서비스 구축</h2>
+					<ul id="c15f8a32-5edc-402c-9beb-fa829d331b0c" class="bulleted-list">
+						<li style="list-style-type:disc">주문형 맞춤인쇄 서비스, 소량 키트 제작 서비스 제공을 위한 CRM 서비스를 개발하고 런칭하였습니다</li>
+					</ul>
+					<ul id="8c9db28c-1812-4e15-bc77-fb845c2fb55d" class="bulleted-list">
+						<li style="list-style-type:disc">ATDD 를 도입했고, 협업을 위해서 Spring RestDocs 를 사용해서 API 문서를 공유하였습니다
+						</li>
+					</ul>
+					<ul id="85ccc1ad-ec0a-4b4a-a6bc-3a2f7f7c79ef" class="bulleted-list">
+						<li style="list-style-type:disc">비지니스 모델이 복잡하고 정책이 수시로 변경되는 어려움이 있었지만, CRM 서비스를 사용하게 될 동료들의 의견을
+							<span style="border-bottom:0.05em solid"><strong>짧은주기 피드백을 받고 적극적인 커뮤니케이션</strong></span>을
+							통해 서비스 런칭을 주도하였습니다.</li>
+					</ul>
+				</div>
+			</div>
+			<p id="ef066dbc-4113-4c4d-848b-add55e45beb5" class="">
+			</p>
+			<div id="1c1ede1d-d3e6-4831-be52-0388e4d74b6e" class="column-list">
+				<div id="dc4b7ec6-8b1a-4ccd-b847-b146542bbe7e" style="width:25%" class="column">
+					<h3 id="a92fb5af-868e-4d1e-a67c-6ae1fd10e933" class="">민코딩연구소
+						프리랜서</h3>
+					<p id="d88f03c1-4cc5-4c44-822c-d7d21b48119d" class="">2020.05 - 2020.09</p>
+				</div>
+				<div id="bbd6e01a-ee8c-4e89-8fba-15b3a3ca04c3" style="width:75%" class="column">
+					<h2 id="08c640d2-5b52-42f1-8c45-e6467d826736" class="">SSAFY 강사</h2>
+					<ul id="5d8313a6-22f2-48ae-8700-dca5c76ec55f" class="bulleted-list">
+						<li style="list-style-type:disc">삼성청년소프트웨어 아카데미(SSAFY) 6기 Web, Embeded 강의를 진행하였습니다. 제가 담당한 주요
+							과목들은 아래와 같습니다<ul id="ab1fe35c-d1be-4791-97d9-b5c0eaed747a" class="bulleted-list">
+								<li style="list-style-type:circle">Linux OS &amp; Bash Shell</li>
+							</ul>
+							<ul id="f86f8b8b-b326-430c-a106-b2ff13a8e7cd" class="bulleted-list">
+								<li style="list-style-type:circle">라즈베리파이 </li>
+							</ul>
+							<ul id="d1c6f56a-244e-4019-8e3c-af0e80155f9f" class="bulleted-list">
+								<li style="list-style-type:circle">임베디드 C 프로그래밍 with MCU</li>
+							</ul>
+							<ul id="8387568f-742e-4b96-b4cb-bc8582b17668" class="bulleted-list">
+								<li style="list-style-type:circle">자료구조 with C Lang</li>
+							</ul>
+							<ul id="0a3939b0-d784-4c32-aac0-3fd281d8e91c" class="bulleted-list">
+								<li style="list-style-type:circle">Node.js &amp; MySQL</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<p id="59216954-5d45-48bf-8e34-9fc6a5d83ba1" class="">
+			</p>
+			<div id="5796f6e4-8c0a-4bc1-a138-15171929d5fc" class="column-list">
+				<div id="e74d4a07-fbdb-4862-a32e-a1dcf538ff16" style="width:25%" class="column">
+					<h3 id="6cbed811-3da5-4281-94d1-407c7d4cc777" class="">모션디바이스
+						SW개발팀</h3>
+					<p id="d0e1b5cc-e435-4acf-9391-94a61c6d1ce1" class="">2016.12 - 2019.01</p>
+					<p id="71b460f5-2d26-4e4e-982c-ece786f01151" class="">
+					</p>
+				</div>
+				<div id="04e66670-2405-415a-93f7-c423c8c7a6f6" style="width:75%" class="column">
+					<h2 id="c784d341-27c3-4e36-b311-cd270c622f15" class="">Motion Control 엔지니어</h2>
+					<p id="12222cdc-33a5-47e2-a58e-111b1f4101f3" class="">2016.12 - 2019.01</p>
+					<h3 id="a6473b0c-d86f-4839-8917-6e7b152edfa1" class=""><strong>Motion Control Middleware 개발</strong>
+					</h3>
+					<ul id="3414f707-5a39-4c88-a067-8549da74a34f" class="bulleted-list">
+						<li style="list-style-type:disc">장비 제어 알고리즘 개발 : 자세데이터(roll, pitch, yaw)를 액추에이터 길이(Axis1,2,3..)
+							정보로 변환하는 알고리즘 개발을 담당했습니다.</li>
+					</ul>
+					<ul id="31a3d907-efd8-4379-8ca1-ee3d2d31d13e" class="bulleted-list">
+						<li style="list-style-type:disc">Hardware Abstraction Layer 개발 : 모터제어기의 세부 구현과 모델에 의존하지 않도록 추상화
+							Layer 개발을을 담당하였습니다.</li>
+					</ul>
+					<ul id="84690e25-6721-4ef7-9214-e0787966de40" class="bulleted-list">
+						<li style="list-style-type:disc">통합미들웨어 개발에 참여하였습니다. 장비의 종류가 많아지고 장비별로 세부 Spec 이 달라지면서 미들웨어의 파편화
+							문제를 해결하기 위해 OOP 기반의 프레임워크를 사용하여 문제를 해결하였습니다.</li>
+					</ul>
+					<p id="e4b2690b-7980-4ef8-8a67-cb1870ce3c43" class=""><strong>고출력 모터 (~2kW) 사용하는 장비의 Motor 관련
+							업무</strong>
+					<div class="indented">
+						<ul id="ddde2859-a24f-4029-9f8f-112a4379e26b" class="bulleted-list">
+							<li style="list-style-type:disc">Motor 의 Parameter Turning 진행 하였습니다.</li>
+						</ul>
+						<ul id="90ecd89b-82f7-475d-9c8a-b90d502d9732" class="bulleted-list">
+							<li style="list-style-type:disc">현장에서 발생하는 이슈들에 대한 원인분석과 문제해결을 진행하였습니다.</li>
+						</ul>
+					</div>
+					</p>
+					<h3 id="afc19fa3-590a-4903-b51a-7f4e55026430" class="">Firmware 개발</h3>
+					<p id="421a1ad3-f7c3-4f5a-9980-74d5b28173b2" class="">2016.12 - 2019.01</p>
+					<ul id="21054d51-e9fb-440f-bc04-db04e053c99a" class="bulleted-list">
+						<li style="list-style-type:disc">자동차 경주 컨텐츠를 위한 Racing Wheel 용 Firmware 개발하였습니다. ServoMotor,
+							Encoder 등을 사용해 제작하였습니다.</li>
+					</ul>
+					<ul id="e69091d6-8bc3-49f5-8c63-9acc8d383a60" class="bulleted-list">
+						<li style="list-style-type:disc">루지/봅슬레이 컨텐츠를 위한 Joystick Firmware 를 개발하였습니다.</li>
+					</ul>
+					<ul id="9d1fa565-f15b-43de-830c-1ba9fa66bff9" class="bulleted-list">
+						<li style="list-style-type:disc">항공기 컨텐츠를 위한 Joystick Firmware 를 개발하였습니다.</li>
+					</ul>
+					<h3 id="3c9fe2c0-b48f-4fb5-86fd-fd2447f079bb" class="">모객 Robot 개발</h3>
+					<p id="b943a8f3-9328-4879-a26f-d455338736e9" class="">2018.01 - 2019.01</p>
+					<ul id="d279d3e8-75a3-472f-8d74-9fc8571735d7" class="bulleted-list">
+						<li style="list-style-type:disc">국가 R&amp;D 연구개발지원 과제로 <strong>“유료 서비스 구매를 유도하는 모객
+								Robot”</strong> 을 개발하였습니다</li>
+					</ul>
+					<ul id="38476ed9-43f7-443d-9958-d1443ce37c62" class="bulleted-list">
+						<li style="list-style-type:disc">영업장에 설치된 Rail을 돌아다니며 고객의 나이/성별 을 인지하고, 감정을 파악하여 고객의 기분에 맞는 최적의
+							멘트를 스피커로 출력하는 로봇입니다</li>
+					</ul>
+					<ul id="fcf85b69-5161-49f5-8682-8ebe318f1223" class="bulleted-list">
+						<li style="list-style-type:disc">기구/제어/인지 3파트 중, 제어 파트를 주도적으로 개발하였습니다</li>
+					</ul>
+				</div>
+			</div>
+			<p id="86c2cd38-acbc-46d5-bd77-d8cf898cf11d" class="">
+			</p>
+			<p id="c10b68d5-9638-4189-b8c6-b5f692672a6a" class="">
+			</p>
+			<p id="bc0bb089-5567-436f-923d-ea05e3e36aec" class="">
+			</p>
+			<p id="dd07a085-2fcb-4159-9433-9a293c70ab9d" class="">
+			</p>
+			<h2 id="f02978d9-ea1b-40f3-a572-346419729199" class=""><strong>Other : Experience &amp; Projects</strong>
+			</h2>
+			<hr id="5bec5c4d-736d-4df9-a222-53f06cf223d2" />
+			<div id="76466e96-e9a1-44ec-aba8-84fbc5eb4eae" class="column-list">
+				<div id="40feeb5c-4470-4a36-a67a-68e2f3ca407c" style="width:25%" class="column">
+					<h2 id="0063d654-2347-45d8-9a48-55d2333f648d" class="">교육</h2>
+				</div>
+				<div id="96066216-03e1-48a6-bd6f-858078342c73" style="width:75%" class="column">
+					<h3 id="c2bc8639-26a2-48fa-9308-617686172321" class="">Next-Step <strong>TDD, 클린 코드 with Java
+							과정</strong></h3>
+					<p id="a0c1cfcd-cffc-446d-8442-39959b5d122a" class="">2023.04 - 2023.06</p>
+					<ul id="6d772edc-01ed-4add-ad71-1101c0bc4bf9" class="bulleted-list">
+						<li style="list-style-type:disc">16기 과정을 수료했습니다. </li>
+					</ul>
+					<ul id="0f995487-dc81-4ca8-a537-d8fb08ebfd3c" class="bulleted-list">
+						<li style="list-style-type:disc">코드리뷰, TDD, 클린코드에 대한 학습 뿐 아니라 주도적인 개발자로 살아가는법, 점진적으로 프로젝트를
+							개선해나가는 소프트스킬에 대해 배웠습니다.</li>
+					</ul>
+					<h3 id="8bad00c9-6f04-42a6-84fa-3e5bda102f12" class="">CodeSquard 2021 마스터즈 백엔드 과정</h3>
+					<p id="bff0b085-2b2b-4eae-bfa7-fc20ae06c004" class="">2020.12 - 2021.06</p>
+					<ul id="bafa21b5-7d94-4f23-adeb-64b4f54193ee" class="bulleted-list">
+						<li style="list-style-type:disc">백엔드 마스터즈 코스 2021 과정을 수료하였습니다. </li>
+					</ul>
+					<ul id="42f2d374-cc00-48c6-9880-91bb7b8b79e3" class="bulleted-list">
+						<li style="list-style-type:disc">프론트엔드, iOS App 등의 다른 Role 의 분들과 소통하면서 함께 프로젝트를 진행하고 완성해나가는 방법을
+							배웠습니다.</li>
+					</ul>
+				</div>
+			</div>
+			<p id="a66b9f6a-290f-4379-b899-e9f7c3868cf3" class="">
+			</p>
+			<div id="3d216d36-d76a-469c-acba-d5a623d60d9a" class="column-list">
+				<div id="acb88217-2f0e-43b7-8952-fe610b52cd94" style="width:25%" class="column">
+					<h2 id="33c2080f-705e-44ba-8856-171a278372aa" class="">O<strong>pen Source
+							Contribution</strong></h2>
+				</div>
+				<div id="c19f0ea8-dac4-4c9f-b0d8-6f40e82ef025" style="width:75%" class="column">
+					<h3 id="63b47ac8-34b2-4be4-86ca-535dccc733dc" class="">FOSSLight Hub
+						2023.05 - 진행중</h3>
+					<ul id="6ea18d0d-983e-446a-915f-f2a869de5c78" class="bulleted-list">
+						<li style="list-style-type:disc">Open Source와 License 보안취약점을 관리하고 OSC(Open
+							Source Compliance) Process를 순차적으로 처리할 수 있는 Spring Boot 기반의 프로젝트에 기여하고 있습니다</li>
+					</ul>
+				</div>
+			</div>
+			<p id="aa7cdc80-307a-45f9-8851-3c633b5ca84c" class="">
+			</p>
+			<div id="45afa0df-2b8e-40b6-bfdc-638414946ffe" class="column-list">
+				<div id="d81b607e-0883-41dc-a1cd-5401dae17a92" style="width:25%" class="column">
+					<h2 id="f5fe822f-1543-4a23-9f51-47356201d7be" class="">Side Project</h2>
+				</div>
+				<div id="a0244bbc-5678-422c-8f49-e902b933afea" style="width:75%" class="column">
+					<h3 id="309a86bf-60b2-412f-bdf0-b05cf372017a" class="">open-library (SaaS 형 도서관 관리 시스템)
+						2022.07 - 일시정지 / RepoLink</h3>
+					<ul id="b8cd27bd-f80b-40b3-b4f2-2b608e85403b" class="bulleted-list">
+						<li style="list-style-type:disc">장서 5만권 이하의 중소형 도서관에서는 장서관리, 도서대출 반납을 수기로 관리하는 어려움을 해결하기 위해 SaaS
+							형 서비스 개발 목표 </li>
+					</ul>
+					<ul id="ee57ef5d-d198-4b0a-9f3d-718f7b726857" class="bulleted-list">
+						<li style="list-style-type:disc">개발자 2명, 도메인전문가 1명과 함께 개발, 코드리뷰, Domain UnitTest, Acceptance
+							Test, DDD 개발문화 지향</li>
+					</ul>
+					<ul id="a8176c27-bd60-4693-935d-4029c1d0f7cc" class="bulleted-list">
+						<li style="list-style-type:disc">대출, 반납, 도서관 상호대차, 자치구 단위의 IAM 서버연동, KOLAS(국립중앙도서관) 시스템 연동 기능 개발
+							목표</li>
+					</ul>
+					<h3 id="4f04fd66-c038-4f68-b5dd-edb02a11de5b" class="">OpenDAQ (누구나 저렴하게 만드는 oscilloscope)
+						2018.00 - 2018.00 / DemoLink / RepoLink</h3>
+					<ul id="2fd347fd-0e58-41bb-85a0-963242fa70f8" class="bulleted-list">
+						<li style="list-style-type:disc">전압 Graph 를 눈으로 확인 할 수 없어 여러움을 느끼는 전자공작, DIY Maker 들을 위해서
+							개발하였습니다.</li>
+					</ul>
+				</div>
+			</div>
+			<div id="b58bc01e-6ff1-4e64-a711-c9d62a2a4837" class="column-list">
+				<div id="bfb7e8fd-c522-48ee-a8a1-f5be9876d62a" style="width:25%" class="column">
+					<h2 id="7dc53708-1680-4ee6-9238-a6321da51802" class="">인덕대학교</h2>
+				</div>
+				<div id="33bd28f9-bf85-4c7f-840d-440558a406dd" style="width:75%" class="column">
+					<h3 id="cee61692-ab4c-4220-8ba3-c0870d5bdcf5" class="">메카트로닉스공학과 졸업
+						2011.02 - 2017.02</h3>
+					<ul id="003d9b80-99c8-4a5f-a075-f95a2552a5e6" class="bulleted-list">
+						<li style="list-style-type:disc">전력전자 Lab 연구원 활동</li>
+					</ul>
+					<ul id="c9cccef9-82a1-482e-964e-0aaec25cd320" class="bulleted-list">
+						<li style="list-style-type:disc">성적우수장학금 3회</li>
+					</ul>
+					<ul id="1af07581-86c5-4576-96e9-84156ba8e81b" class="bulleted-list">
+						<li style="list-style-type:disc">도서관 우수이용자 상 2회</li>
+					</ul>
+				</div>
+			</div>
+			<p id="554a3688-f81b-4878-a8f3-5c514bfdad1c" class="">
+			</p>
+			<p id="1373f030-379b-4ecb-9190-c00408b2f15f" class="">
+			</p>
+			<p id="5a5e6137-b3f5-4c23-ba1c-2547d0b830e1" class="">
+			</p>
+			<h2 id="47dec888-f66d-4e0b-8d98-e98a6e05f1e7" class=""><strong>Skills 🎯</strong></h2>
+			<hr id="bd8d7137-6196-4bc2-a1ad-dcd7d80b23e4" />
+			<div id="665a9abc-939a-4511-b86b-c44caf525275" class="column-list">
+				<div id="43289e74-8278-45e9-b450-469083ccdcbd" style="width:25%" class="column">
+					<h3 id="0cc75860-8ff5-4901-b3db-727de31a7cce" class="">Communication</h3>
+				</div>
+				<div id="0fbd48b5-e2dd-4647-8ea0-fe74719aa7b8" style="width:75%" class="column">
+					<ul id="92d36d99-fc77-4c1c-a074-1e0ec33bd906" class="bulleted-list">
+						<li style="list-style-type:disc">다른 의견을 유연하게 수용하기 위해서 노력합니다</li>
+					</ul>
+					<ul id="67a50b1d-606b-4896-9345-e39e5359b54c" class="bulleted-list">
+						<li style="list-style-type:disc">지적으로 겸손하고 편안한 커뮤니케이션 방식을 위해 노력합니다</li>
+					</ul>
+					<ul id="3053e767-2dfc-4e89-9b65-054b5cca2985" class="bulleted-list">
+						<li style="list-style-type:disc">적극적으로 제 생각을 표현하기 위해 노력합니다</li>
+					</ul>
+				</div>
+			</div>
+			<div id="896906a8-dfe2-4746-9ece-2df3ab5e2e59" class="column-list">
+				<div id="15cba445-2235-4e82-a60d-cb833fb0421a" style="width:25%" class="column">
+					<h3 id="d7c2a25c-9d36-485a-a6a8-7c3a93bee92c" class="">Springboot </h3>
+				</div>
+				<div id="abafe217-2774-4d54-8000-ee3b2fcf65a7" style="width:75%" class="column">
+					<ul id="f7e065f4-80b3-4201-a964-5af833a820a0" class="bulleted-list">
+						<li style="list-style-type:disc">스프링 핵심원리 Bean, DI 에 대한 개념을 이해하고 활용하고 있습니다</li>
+					</ul>
+					<ul id="09173bcc-f1aa-4006-af1d-d0b5f94a7c78" class="bulleted-list">
+						<li style="list-style-type:disc">Transaction, AOP 기능의 동작원리를 이해하고 활용하고 있습니다</li>
+					</ul>
+					<ul id="5e25ce17-5758-446c-947c-8d91eeade054" class="bulleted-list">
+						<li style="list-style-type:disc">RDB 로 부터 데이터를 접근하는 다양한 기술인 JdbcTemplate, JPA, QueryDSL 등을 이해하고
+							활용하고 있습니다</li>
+					</ul>
+				</div>
+			</div>
+			<div id="aa7889e9-cbca-431e-8b41-7cc21d2c7637" class="column-list">
+				<div id="088381ce-918f-4021-b9ae-9f006ba37127" style="width:25%" class="column">
+					<h3 id="f76e7832-a5d6-4cc5-8ca5-fd4fd392fb13" class=""><strong>DevOps</strong></h3>
+				</div>
+				<div id="c44aee41-94e7-47cd-8efc-b5ed3b4c0501" style="width:75%" class="column">
+					<ul id="c20792d5-1989-40d8-8065-a4309479c81d" class="bulleted-list">
+						<li style="list-style-type:disc">쿠버네티스 환경에서 개발하고 배포하는 환경에 익숙합니다</li>
+					</ul>
+					<ul id="591933bb-994f-4646-a444-e2d0bf5cb8ce" class="bulleted-list">
+						<li style="list-style-type:disc">Git Actions / D2Hub 등의 환경에서의 CI/CD 구축에 기여하였습니다</li>
+					</ul>
+				</div>
+			</div>
+			<p id="fdb6feef-fa34-4b63-9389-33d270a11eb6" class="">
+			</p>
+			<p id="5309dc23-9bd3-4160-b5ce-a41c89e31f16" class="">
+			</p>
+			<p id="72e7ba0a-200e-40a6-9819-002fa5d27718" class="">
+			</p>
+			<p id="c65de766-c362-451e-88f6-09a1edb6d813" class="">
+			</p>
+			<h2 id="c65de572-9567-4a2c-bb5b-28a03fdcf4c9" class="">Prize &amp; Awards &amp; Certifications
+				<strong>🏆</strong></h2>
+			<hr id="5e67cd61-095c-40e4-b5eb-ab4365a3604a" />
+			<p id="3cbde5db-226f-4e4a-9230-2414a88014d9" class="">
+			</p>
+			<div id="35c947c0-0dd1-48ad-989d-58594c75460b" class="column-list">
+				<div id="b05d7e01-02ce-4465-a25c-48adccff0023" style="width:25%" class="column">
+					<h3 id="9265a295-fee4-4942-b2f2-e7af6e499155" class="">2023</h3>
+				</div>
+				<div id="9112787b-63b6-4c55-81c7-3441af2050ab" style="width:75%" class="column">
+					<ul id="2e691fa9-3424-47d1-8c1e-b6dba87946c3" class="bulleted-list">
+						<li style="list-style-type:disc"><code>(예정)</code> 지속가능한 프로덕트와 개발을 위하여 / 테크톡</li>
+					</ul>
+				</div>
+			</div>
+			<div id="eafb56a6-5ac4-46a1-9509-ec3d0455ee0d" class="column-list">
+				<div id="2268e08b-b623-45b4-8879-960b362a5335" style="width:25%" class="column">
+					<h3 id="06635952-4076-4c44-8073-6ecf7629ab7e" class="">2021</h3>
+				</div>
+				<div id="b46cf488-518c-4624-ab4f-576c1ae5a501" style="width:75%" class="column">
+					<ul id="bf2978c8-9456-4653-b53c-32ac10e6e378" class="bulleted-list">
+						<li style="list-style-type:disc">리눅스로 개발하기 / by 코드스쿼드 테크톡<ul
+								id="11d912e6-fe63-480b-9c4a-0a1a491019d5" class="bulleted-list">
+								<li style="list-style-type:circle"><a href="https://youtu.be/mPrmi0vrlQM">테크톡 발표</a>
+								</li>
+							</ul>
+							<ul id="5d4a16dd-0b6f-4248-9c94-44df342439b5" class="bulleted-list">
+								<li style="list-style-type:circle">
+									<code>리눅스 입문자를 대상으로 Linux Mint 배포판에서 개발이 가능하도록 개발용 PC를 세팅하는 이야기 입니다</code></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="3cbfc933-75da-4a48-ab91-685264be1c12" class="column-list">
+				<div id="24d51fc5-0589-437b-a6f3-9e796ff03bf8" style="width:25%" class="column">
+					<h3 id="0c617c76-b5c2-4546-87b4-e72f66f7e268" class="">2020</h3>
+				</div>
+				<div id="0e0deddc-c1a6-4676-99a3-501e73f719cc" style="width:75%" class="column">
+					<ul id="a30d890d-2884-47cd-ac55-808f65858ba1" class="bulleted-list">
+						<li style="list-style-type:disc">E-Commerce Backend 개발 Challenge <code>2등</code> / by Numble<ul
+								id="28ca8f17-9dd8-40bf-a09e-bfccf5e2e3c7" class="bulleted-list">
+								<li style="list-style-type:circle"><a href="https://youtu.be/dDeGkstXIM4">Demo</a> / <a
+										href="https://github.com/d-h-k/just-board">Repo</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="9d79b0bc-02ee-43c9-82d2-f62a053ecf6e" class="column-list">
+				<div id="e1c33032-f38f-4d81-a76e-876cb9c02283" style="width:25%" class="column">
+					<h3 id="b8176a74-9a09-4edf-839c-694f79dcd702" class="">2019</h3>
+					<p id="980226d3-9f23-4ff0-a6e4-702abfd5f981" class="">
+					</p>
+				</div>
+				<div id="59da4731-688a-43e5-b092-ccdf7af6d1c2" style="width:75%" class="column">
+					<ul id="ae3b5c80-009d-49e8-abdc-238cff0067af" class="bulleted-list">
+						<li style="list-style-type:disc">TouchGFX APP 개발대회 <code>우수상</code> / by STMicroelectronics<ul
+								id="ccee2de6-a9b8-44c8-a752-d1aaf0d51cdb" class="bulleted-list">
+								<li style="list-style-type:circle"><a
+										href="https://github.com/d-h-k/STM32F7508">Repo</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul id="dbb4912e-3984-465b-8bdc-55b9676a7964" class="bulleted-list">
+						<li style="list-style-type:disc">물류센터 자율주행 군집로봇 <code>최우수작품상</code> / by 한컴MDS<ul
+								id="741ea0f9-e1e0-4a68-892d-c51851ab36a5" class="bulleted-list">
+								<li style="list-style-type:circle"><a href="https://youtu.be/grBtP7XDKew">Demo</a> / <a
+										href="https://youtu.be/XcbJECUckB8">오픈로보틱스 발표</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul id="9e1a200a-52ac-4d45-a14d-04ace62be295" class="bulleted-list">
+						<li style="list-style-type:disc">리눅스 마스터 2급 / by KAIT</li>
+					</ul>
+				</div>
+			</div>
+			<div id="68c3b81a-9e06-4fe4-89dc-5e5b6b9647ba" class="column-list">
+				<div id="fc5e656a-5005-4886-9378-1deb62f28cc0" style="width:25%" class="column">
+					<h3 id="c71ebfa3-64e9-44f8-9406-9b7ef48e0f62" class="">before 2019</h3>
+				</div>
+				<div id="65c491f1-cda2-4c27-ba22-9e478ddf309e" style="width:75%" class="column">
+					<ul id="1af96851-6733-4c66-8699-19e19a5631da" class="bulleted-list">
+						<li style="list-style-type:disc">ICT 창업경진대회 <code>우수상</code> / by 미래창조과학부 장관<ul
+								id="fa7b956e-3fbc-4ee7-8b5a-f64b64e632b6" class="bulleted-list">
+								<li style="list-style-type:circle">스마트 밀폐교반기 씰링장치 </li>
+							</ul>
+						</li>
+					</ul>
+					<ul id="1be22674-b80f-431f-a319-812ecd6237a2" class="bulleted-list">
+						<li style="list-style-type:disc">대형 자동차 운전면허</li>
+					</ul>
+					<ul id="e5b7fc2a-1a81-4e8a-af21-a14f9adfdbab" class="bulleted-list">
+						<li style="list-style-type:disc">항공기체정비 기능사</li>
+					</ul>
+					<ul id="30d14f16-c0a1-454c-9052-ce78b1d060ed" class="bulleted-list">
+						<li style="list-style-type:disc">성적우수장학금 / by 인덕대학교</li>
+					</ul>
+				</div>
+			</div>
+			<p id="f4f98d1c-a917-4934-a387-7f801755b937" class="">
+			</p>
+			<p id="7890719b-b0c2-4ca2-ac50-f8586f8fd9fe" class="">
+			</p>
+			<p id="6a4305e6-0304-4824-bfea-c4c1a893d0a2" class="">
+			</p>
+		</div>
+	</article>
+</body>
+
+</html>
